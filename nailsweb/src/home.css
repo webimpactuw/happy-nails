@@ -1,0 +1,26 @@
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  text-align: center;
+}
+
+.store-comment {
+  display: flex;
+}
+
+.store-comment img {
+  width: 50%;
+  height: 400px;
+}
+
+.store-comment > * {
+  padding: 40px;
+}
+
+.about-me {
+  width: 50%;
+}
