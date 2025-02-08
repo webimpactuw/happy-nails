@@ -1,12 +1,19 @@
-import './home.css';
+import './app.css';
+import { Link } from "react-router-dom"
 
-function Home() {
+function App() {
   return (
     <div className="Home">
       <div className="top">
-        <button>gallery</button>
-        <button>services</button>
-        <button>book now</button>
+      <Link to="/gallery">
+        <button>Gallery</button>
+      </Link>
+      <Link to="/services">
+        <button>Services</button>
+      </Link>
+      <Link to="/book">
+        <button>Book Now</button>
+      </Link>
       </div>
       <div className='logo'>HappyNail</div>
       <section className='store-comment'>
@@ -35,4 +42,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default App;

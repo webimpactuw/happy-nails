@@ -51,3 +51,34 @@ git checkout main
 git commit
 git merge feature-branch
 ```
+
+# Navigate pages
+1. create routes directory and put all the pages.
+2. craete router.js and define all the paths.
+```
+import { createBrowserRouter } from "react-router-dom"
+import App from "./App";
+import Book from "./routes/Book";
+import Services from "./routes/Services";
+import Gallery from "./routes/Gallery";
+
+const router = createBrowserRouter(
+  [
+    { path: '/', element: <App /> },
+    { path: '/book', element: <Book /> },
+    { path: '/services', element: <Services /> },
+    { path: '/gallery', element: <Gallery />}
+  ]
+)
+
+export default router;
+```
+
+3. in index.js, create <RouterProvider router={router}/>
+```
+root.render(
+  <React.StrictMode>
+    <RouterProvider router={router}/>
+  </React.StrictMode>
+);
+```
