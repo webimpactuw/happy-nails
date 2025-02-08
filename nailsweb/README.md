@@ -82,3 +82,16 @@ root.render(
   </React.StrictMode>
 );
 ```
+
+4. use Link to navigate to different pages.
+```
+<Link to="/gallery">
+  <button>Gallery</button>
+</Link>
+<Link to="/services">
+  <button>Services</button>
+</Link>
+<Link to="/book">
+  <button>Book Now</button>
+</Link>
+```
