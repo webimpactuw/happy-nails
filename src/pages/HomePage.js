@@ -5,6 +5,13 @@ import Foot from '../components/Foot';
 
 function HomePage() {
 
+/*
+ TODO:  
+    - put heroBanner directly into HomePage
+    - moving gallery
+    - reviews
+*/
+
   return (
     <>
     <NavBar></NavBar>

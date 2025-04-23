@@ -1,5 +1,13 @@
 import React from 'react';
 
+/*
+ TODO:  
+    - drop down menu
+    - redirecting
+    - use inline styling for non-repeating styling
+    - interactive buttons?
+*/
+
 function NavBar() {
     const logoStyle = {
         fontFamily: 'Georgia, serif',

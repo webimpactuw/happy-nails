@@ -5,6 +5,14 @@ import HomePage from './pages/HomePage';
 import TestPage from './pages/TestPage';
 import ClickPage from './pages/ClickPage';
 
+/*
+ TODO:  
+    - Contact Page
+    - Services Page
+    - Booking Page
+    - About Page
+*/
+
 function App() {
   return (
     <BrowserRouter>
