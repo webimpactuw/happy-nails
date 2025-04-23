@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Foot from '../components/Foot';
 
 function HomePage() {
   const [count, setCount] = useState(0);
@@ -19,6 +20,7 @@ function HomePage() {
       <button onClick={() => setCount(count + 1)}>
         Increment
       </button>
+      <Foot></Foot>
     </div>
   );
 }

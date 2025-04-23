@@ -1,0 +1,31 @@
+.main-footer {
+    color: white;
+    background-color: #7D1260;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .row {
+    display: flex; /* Enables horizontal layout */
+    justify-content: space-between; /* Evenly spaces out the columns */
+    flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
+  }
+  
+  .col {
+    flex: 1; /* Makes columns take up equal space */
+    padding: 1em; /* Adds spacing around the columns */
+    min-width: 200px; /* Ensures columns don't shrink too much */
+  }
+  
+  h4 {
+    margin-bottom: 1em;
+    font-size: 1.2em;
+  }
+  
+  .list-unstyled {
+    list-style: none; /* Removes bullet points from lists */
+    padding: 0;
+  }
+  
