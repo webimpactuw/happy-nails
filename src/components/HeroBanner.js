@@ -8,7 +8,7 @@ function HeroBanner() {
         backgroundImage: `url(${bannerImage})`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh',
+        height: '75vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
