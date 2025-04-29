@@ -27,11 +27,10 @@ const Gallery = () => {
     }
   }, []);
 
-  // Create a "circular" array with doubled images
-  // This avoids any need to rearrange during animation
+  // Create "circular" array with doubled images
   const displayImages = [...IMAGES, ...IMAGES];
 
-  const rotateImages = () => {
+  const rotateImagesRight = () => {
     if (isAnimating) return;
     setIsAnimating(true);
 
@@ -42,7 +41,7 @@ const Gallery = () => {
     const nextPosition = (position + 1) % IMAGES.length;
     
     // Set up smooth transition
-    slider.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+    slider.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
     slider.style.transform = `translateX(-${(position + 1) * IMAGE_WIDTH}px)`;
     
     // When transition completes
@@ -67,6 +66,46 @@ const Gallery = () => {
     slider.addEventListener('transitionend', handleTransitionEnd, { once: true });
   };
 
+  const rotateImagesLeft = () => {
+    if (isAnimating) return;
+    setIsAnimating(true);
+  
+    const slider = sliderRef.current;
+    if (!slider) return;
+  
+    let newPosition = position - 1;
+  
+    if (newPosition < 0) {
+      // Jump instantly to duplicate set (at end)
+      newPosition = IMAGES.length - 1;
+      slider.style.transition = 'none';
+      slider.style.transform = `translateX(-${IMAGES.length * IMAGE_WIDTH}px)`;
+  
+      // Wait one animation frame, then animate back one
+      requestAnimationFrame(() => {
+        slider.style.transition = 'transform 0.2s cubic-bezier(0.4, 0, 0.2, 1)';
+        slider.style.transform = `translateX(-${newPosition * IMAGE_WIDTH}px)`;
+      });
+  
+      // After the real transition ends, update position
+      const handleTransitionEnd = () => {
+        setPosition(newPosition);
+        setTimeout(() => setIsAnimating(false), 50);
+      };
+      slider.addEventListener('transitionend', handleTransitionEnd, { once: true });
+    } else {
+      // Normal left movement
+      slider.style.transition = 'transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+      slider.style.transform = `translateX(-${newPosition * IMAGE_WIDTH}px)`;
+  
+      const handleTransitionEnd = () => {
+        setPosition(newPosition);
+        setTimeout(() => setIsAnimating(false), 50);
+      };
+      slider.addEventListener('transitionend', handleTransitionEnd, { once: true });
+    }
+  };
+  
   // Common styles
   const styles = {
     container: {
@@ -129,7 +168,21 @@ const Gallery = () => {
       <div style={{ display: 'flex', justifyContent: 'center' }}>
         <div style={styles.sliderContainer}>
           <button 
-            onClick={rotateImages} 
+              onClick={rotateImagesLeft} 
+              style={{ 
+                ...styles.button, 
+                left: '0.5em', 
+                right: 'auto', 
+                transform: 'translateY(-50%) rotate(180deg)' 
+              }} 
+              aria-label="Rotate gallery left"
+              disabled={isAnimating}
+          >
+            <FaPlay style={{ fontSize: '0.8em' }} />
+          </button>
+
+          <button 
+            onClick={rotateImagesRight} 
             style={styles.button} 
             aria-label="Rotate gallery"
             disabled={isAnimating}
