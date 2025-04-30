@@ -1,5 +1,7 @@
 import React from 'react';
-
+import { PiWifiNoneLight } from 'react-icons/pi';
+import { useState } from 'react';
+import HoverButton from '../components/HoverButton'
 /*
  TODO:  
     - drop down menu
@@ -8,15 +10,35 @@ import React from 'react';
     - interactive buttons?
 */
 
+/*
+
+1. Button to open dropdown the menu - The button to represent the drop down - service button in our case 
+2. Use container element like div to create a drop down menu and add drop downlinks inside it - the container itself
+3. Wrap a div element around the button and the div to position the drop menu correctly with CSS - Used for positioning. 
+*/
+
+
+/* HTML */
+<div class="drop down">
+    <button class="dropbtn">Services</button>
+    <div class="dropdown-content">
+        <a href="#">Nails</a>
+        <a href="#">Waxing</a>
+        <a href="#">Foot Massage</a>
+    </div>
+</div>
+
+
 function NavBar() {
     const logoStyle = {
         fontFamily: 'Georgia, serif',
         color: 'white',
-        padding: '0 0 0 2em',
+        padding: '2em',
         display: 'flex',
         alignItems: 'center',
         justfyContent: 'flex-start',
-        fontStyle: 'italic'
+        fontStyle: 'italic',
+        fontSize: '100%'
     }
 
     const navBarStyle = {
@@ -41,6 +63,7 @@ function NavBar() {
         color: 'white',
         padding: '2em',
         fontFamily: 'Arial, sans-serif',
+        fontSize: '100%'
     }
 
     const buttonStyle = {
@@ -49,11 +72,13 @@ function NavBar() {
         fontFamily: 'Arial, sans-serif',
         borderRadius: '5px',
         borderColor: 'white',
-        padding: '1px 2em '
+        padding: '1px 2em ',
+        boxShadow: 'black'
 
     }
 
   return (
+
 
   <div>
   <nav>
@@ -63,14 +88,12 @@ function NavBar() {
         </div>
         <div style={navigationStyle}>
             <div style={navStyle}>
-                <h4>Home</h4>
+                <a style={{fontWeight:'bold'}}>Home</a>
             </div>
             <div style={navStyle}>
-                <h4>Contact</h4>
+            <a style={{fontWeight:'bold'}}>Contact</a>
             </div>
-            <div style={navStyle}>
-                <h4>Services</h4>
-            </div>
+            <HoverButton></HoverButton>
             <div style={navStyle}>
                 <button style={buttonStyle}>
                     <p style={{fontWeight:'bold'}}>Book Now</p>
@@ -81,8 +104,12 @@ function NavBar() {
 
   </nav>
   </div>
-  );
 
+  );
 }
 
+
+
 export default NavBar;
+
+
