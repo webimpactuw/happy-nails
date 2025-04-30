@@ -1,12 +1,12 @@
+import SectionDivider from "../components/SectionDivider"
 
-
-// add your components to the test page to see what they look like
 function TestPage() {
 
   return (
-    <>
-    <p>remove this if you want</p>
-    </>
+    <div>
+      <SectionDivider title="Gallery" align="left" />
+      <SectionDivider title="reivew" align="center" />
+    </div>
   );
 }
 
