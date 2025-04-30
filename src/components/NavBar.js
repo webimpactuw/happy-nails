@@ -31,7 +31,7 @@ import HoverButton from '../components/HoverButton'
 
 function NavBar() {
     const logoStyle = {
-        fontFamily: 'Georgia, serif',
+        fontFamily: "'Fraunces', serif",
         color: 'white',
         padding: '2em',
         display: 'flex',

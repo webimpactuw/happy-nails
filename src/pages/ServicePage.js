@@ -1,9 +1,15 @@
-// import React, { useEffect, useState } from 'react';
 import NavBar from '../components/NavBar';
-import HeroBanner from '../components/HeroBanner';
 import Foot from '../components/Foot';
+import SectionDivider from '../components/SectionDivider';
+import ServiceElement from '../components/ServiceElement';
 
-function HomePage() {
+function ServicePage() {
+    const body = {
+        backgroundColor: '#FEE8ED',
+        height: '100vh',
+        padding: '2em'
+    }
+
 
 /*
  TODO:  
@@ -15,11 +21,14 @@ function HomePage() {
   return (
     <>
     <NavBar></NavBar>
-    <HeroBanner></HeroBanner>
+    <div style={body}>
+        <SectionDivider title="Services"></SectionDivider>
+        <ServiceElement></ServiceElement>
+    </div>
     <Foot></Foot> 
     </>
 
   );
 }
 
-export default HomePage;
+export default ServicePage;
