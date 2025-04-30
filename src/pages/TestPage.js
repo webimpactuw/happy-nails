@@ -1,11 +1,21 @@
-import SectionDivider from "../components/SectionDivider"
+import HeroBanner from '../components/HeroBanner';
+import NavBar from '../components/NavBar';
+import Foot from '../components/Foot';
+import SectionDivider from '../components/SectionDivider';
+
+
 
 function TestPage() {
 
   return (
     <div>
-      <SectionDivider title="Gallery" align="left" />
-      <SectionDivider title="reivew" align="center" />
+      <NavBar></NavBar>
+      <HeroBanner></HeroBanner>
+      <Foot></Foot>
+      <h2>
+        fdjgsfgsdfg
+      </h2> 
+      <SectionDivider title='blah' align='left'></SectionDivider>
     </div>
   );
 }
