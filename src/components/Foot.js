@@ -1,40 +1,60 @@
 import React from "react";
-import "./footer.css";
+import InformationBox from "./InformationBox";
 
 function Foot() {
+  // Data for the footer
+  const footerData = {
+    hours: [
+      { date: "Mon - Fri", time: "10 AM - 7 PM" },
+      { date: "Sat", time: "10 AM - 6 PM" },
+      { date: "Sun", time: "10 AM - 4 PM" },
+    ],
+    location: "3904 E Mullan Ave #F, Post Falls, ID 83854", 
+    contact: {
+      phone: "208 773 4627", 
+      email: "happy@nails.com", 
+    },
+  };
+
+  const styles = {
+    mainFooter: {
+      color: "white",
+      backgroundColor: "#7D1260",
+      paddingTop: "3em",
+      position: "relative",
+      bottom: "0",
+      width: "100%",
+    },
+    row: {
+      display: "flex",
+      justifyContent: "space-between",
+      flexWrap: "wrap",
+    },
+    footerTextContainer: {
+      display: "flex",         // Use flexbox for centering
+      justifyContent: "center", // Center the content horizontally
+      alignItems: "center",     // Center vertically (if needed)
+      width: "100%",            // Make sure it takes full width
+    },
+    footerText: {
+      textAlign: "center", 
+      fontSize: "0.9em",
+      color: "white",
+      marginTop: "2em",
+    }
+  };
+
   return (
-    <div className="main-footer">
+    <div style={styles.mainFooter}>
       <div className="container">
-        <div className="row">
-          {/* Column1 */}
-          <div className="col">
-            <h4>Hours</h4>
-            <ui className="list-unstyled">
-              <li>Mon - Fri: 10 AM - 7 PM</li>
-              <li>Sat: 10 AM - 6 PM</li>
-              <li>Sat: 10 AM - 4 PM</li>
-            </ui>
-          </div>
-          {/* Column2 */}
-          <div className="col">
-            <h4>Location</h4>
-            <ui className="list-unstyled">
-              <li>3904 E Mullan Ave #F</li>
-              <li>Post Falls, ID 83854 </li>
-            </ui>
-          </div>
-          {/* Column3 */}
-          <div className="col">
-            <h4>Contact</h4>
-            <ui className="list-unstyled">
-              <li>208 773 4627</li>
-              <li>happy@nails.com</li>
-            </ui>
-          </div>
+        <div style={styles.row}>
+          <InformationBox title="Hours" items={footerData.hours} />
+          <InformationBox title="Location" items={[footerData.location]} /> 
+          <InformationBox title="Contact" items={[footerData.contact.phone, footerData.contact.email]} /> 
         </div>
         <hr />
-        <div className="row">
-          <p className="col-sm">
+        <div style={styles.footerTextContainer}>
+          <p style={styles.footerText}>
             &copy;{new Date().getFullYear()} WEBIMPACT | All rights reserved |
             Terms Of Service | Privacy
           </p>
