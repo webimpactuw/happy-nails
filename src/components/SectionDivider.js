@@ -1,8 +1,7 @@
 import React from 'react';
 
-const SectionDivider = ({ title = 'Section Title', align = 'left' }) => {
-
-    const containerStyle = {
+const SectionDivider = ({ children, align = 'left' }) => {
+  const containerStyle = {
     display: 'flex',
     alignItems: 'center',
     gap: '1rem',
@@ -17,7 +16,7 @@ const SectionDivider = ({ title = 'Section Title', align = 'left' }) => {
 
   const lineStyle = {
     flex: 1,
-    height: '0.06em',
+    height: '1px',
     backgroundColor: '#7D1260',
   };
 
@@ -28,9 +27,10 @@ const SectionDivider = ({ title = 'Section Title', align = 'left' }) => {
       <span style={{
         fontFamily: "'Fraunces', serif",
         fontSize: '1.5rem',
-        color: '#7d1260'
+        color: '#7d1260',
+        fontWeight: 'normal'
       }}>
-        {title}
+        {children}
       </span>
 
       {(align === 'center' || align === 'left') && <div style={lineStyle}></div>}
