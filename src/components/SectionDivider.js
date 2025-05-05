@@ -20,16 +20,18 @@ const SectionDivider = ({ children, align = 'left' }) => {
     backgroundColor: '#7D1260',
   };
 
+  const textStyle = {
+    fontFamily: "'Fraunces', serif",
+    fontSize: '1.5rem',
+    color: '#7d1260',
+    fontWeight: 'normal',
+  };
+
   return (
     <div style={containerStyle}>
-      {align === 'center' && <div style={lineStyle}></div>}
+      {(align === 'right') && <div style={lineStyle}></div>}
 
-      <span style={{
-        fontFamily: "'Fraunces', serif",
-        fontSize: '1.5rem',
-        color: '#7d1260',
-        fontWeight: 'normal'
-      }}>
+      <span style={textStyle}>
         {children}
       </span>
 

@@ -15,7 +15,7 @@ function TestPage() {
       <h2>
         fdjgsfgsdfg
       </h2> 
-      <SectionDivider title='blah' align='left'></SectionDivider>
+      <SectionDivider align='left'>blah</SectionDivider>
     </div>
   );
 }
