@@ -20,9 +20,8 @@ function ServicePage() {
 
   return (
     <>
-    <NavBar></NavBar>
     <div style={body}>
-        <SectionDivider title="Services"></SectionDivider>
+        <SectionDivider align="right">Services</SectionDivider>
         <ServiceElement></ServiceElement>
     </div>
     <Foot></Foot> 

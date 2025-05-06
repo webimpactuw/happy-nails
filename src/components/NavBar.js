@@ -19,34 +19,33 @@ import HoverButton from '../components/HoverButton'
 
 
 /* HTML */
-<div class="drop down">
+{/* <div class="drop down">
     <button class="dropbtn">Services</button>
     <div class="dropdown-content">
         <a href="#">Nails</a>
         <a href="#">Waxing</a>
         <a href="#">Foot Massage</a>
     </div>
-</div>
+</div> */}
 
 
 function NavBar() {
     const logoStyle = {
         fontFamily: "'Fraunces', serif",
         color: 'white',
-        padding: '2em',
         display: 'flex',
         alignItems: 'center',
         justfyContent: 'flex-start',
         fontStyle: 'italic',
-        fontSize: '100%'
+        
     }
 
     const navBarStyle = {
         display: 'flex',
         backgroundColor: 'rgb(125, 18, 96)',
         justifyContent: 'space-between',
-        height: '100px',
-        flexDirection: 'row'
+        flexDirection: 'row',
+        padding: '0 1em'
     }
 
     const navigationStyle = {
@@ -61,44 +60,39 @@ function NavBar() {
         justifyContent: 'center',
         alignItems: 'center',
         color: 'white',
-        padding: '2em',
+        padding: '1em',
         fontFamily: 'Arial, sans-serif',
-        fontSize: '100%'
+        fontSize: '100%',
+        fontWeight: 'bold',
+        textDecoration: 'none',
+
     }
 
     const buttonStyle = {
         backgroundColor: 'white',
         color: 'rgb(125, 18, 96)',
         fontFamily: 'Arial, sans-serif',
-        borderRadius: '5px',
+        // borderRadius: '5px',
         borderColor: 'white',
-        padding: '1px 2em ',
-        boxShadow: 'black'
+        padding: '0 2em ',
+        boxShadow: 'black',
+        fontWeight: 'bold',
 
     }
 
   return (
 
-
   <div>
   <nav>
     <div style={navBarStyle}>
-        <div style ={logoStyle}>
-            <h1>Happy Nails</h1>
-        </div>
+            <h1  style ={logoStyle}>Happy Nails</h1>
         <div style={navigationStyle}>
-            <div style={navStyle}>
-                <a style={{fontWeight:'bold'}}>Home</a>
-            </div>
-            <div style={navStyle}>
-            <a style={{fontWeight:'bold'}}>Contact</a>
-            </div>
-            <HoverButton></HoverButton>
-            <div style={navStyle}>
-                <button style={buttonStyle}>
+                <a style={navStyle} href='/'>Home</a>
+                <a style={navStyle} href='/contacts'>Contact</a>
+            <HoverButton buttonStyle={navStyle}></HoverButton>
+                <button style={buttonStyle} href='/booking'>
                     <p style={{fontWeight:'bold'}}>Book Now</p>
                 </button>
-            </div>
         </div>
     </div>
 

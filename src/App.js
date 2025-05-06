@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import TestPage from './pages/TestPage';
 import ClickPage from './pages/ClickPage';
 import ServicePage from './pages/ServicePage';
+import NavBar from './components/NavBar';
 
 /*
  TODO:  
@@ -17,13 +18,14 @@ import ServicePage from './pages/ServicePage';
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/services" element={<ServicePage />}/>
-        <Route path="/test" element={<TestPage />}/>
-        <Route path="/test/click" element={<ClickPage />}/>
+      <NavBar/>
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="/services" element={<ServicePage />}/>
+          <Route path="/test" element={<TestPage />}/>
+          <Route path="/test/click" element={<ClickPage />}/>
 
-      </Routes>
+        </Routes>
     </BrowserRouter>
   );
 }
