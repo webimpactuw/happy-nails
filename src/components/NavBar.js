@@ -1,35 +1,13 @@
 import React from 'react';
-import { PiWifiNoneLight } from 'react-icons/pi';
 import { useState } from 'react';
 import HoverButton from '../components/HoverButton'
-/*
- TODO:  
-    - drop down menu
-    - redirecting
-    - use inline styling for non-repeating styling
-    - interactive buttons?
-*/
+import { motion } from "motion/react"
 
-/*
-
-1. Button to open dropdown the menu - The button to represent the drop down - service button in our case 
-2. Use container element like div to create a drop down menu and add drop downlinks inside it - the container itself
-3. Wrap a div element around the button and the div to position the drop menu correctly with CSS - Used for positioning. 
-*/
-
-
-/* HTML */
-{/* <div class="drop down">
-    <button class="dropbtn">Services</button>
-    <div class="dropdown-content">
-        <a href="#">Nails</a>
-        <a href="#">Waxing</a>
-        <a href="#">Foot Massage</a>
-    </div>
-</div> */}
 
 
 function NavBar() {
+    const [isHovered, setIsHovered] = useState(false);
+
     const logoStyle = {
         fontFamily: "'Fraunces', serif",
         color: 'white',
@@ -69,12 +47,12 @@ function NavBar() {
     }
 
     const buttonStyle = {
-        backgroundColor: 'white',
+        backgroundColor: isHovered ? 'rgb(243, 243, 243)' : 'white',
         color: 'rgb(125, 18, 96)',
         fontFamily: 'Arial, sans-serif',
         // borderRadius: '5px',
         borderColor: 'white',
-        padding: '0 2em ',
+        padding: '1em 1.5em ',
         boxShadow: 'black',
         fontWeight: 'bold',
 
@@ -88,11 +66,21 @@ function NavBar() {
             <h1  style ={logoStyle}>Happy Nails</h1>
         <div style={navigationStyle}>
                 <a style={navStyle} href='/'>Home</a>
+                <HoverButton buttonStyle={navStyle}></HoverButton>
                 <a style={navStyle} href='/contacts'>Contact</a>
-            <HoverButton buttonStyle={navStyle}></HoverButton>
-                <button style={buttonStyle} href='/booking'>
-                    <p style={{fontWeight:'bold'}}>Book Now</p>
-                </button>
+            <motion.button
+              style={buttonStyle}
+              whileHover={{
+                scale: 1.05,
+                backgroundColor: 'rgb(243, 243, 243)',
+              }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ type: 'spring', stiffness: 300 }}
+              onClick={() => window.location.href = '/booking'} // href doesn't work on <button>
+            >
+
+              Book Now
+            </motion.button>
         </div>
     </div>
 
