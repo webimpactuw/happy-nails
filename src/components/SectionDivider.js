@@ -28,7 +28,8 @@ const SectionDivider = ({ title = 'Section Title', align = 'left' }) => {
       <span style={{
         fontFamily: "'Fraunces', serif",
         fontSize: '1.5rem',
-        color: '#7d1260'
+        color: '#7d1260',
+        fontStyle: 'italic'
       }}>
         {title}
       </span>
