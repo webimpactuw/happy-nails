@@ -64,8 +64,4 @@ function Foot() {
   );
 }
 
-<<<<<<< HEAD
 export default Foot;
-=======
-export default Foot;
->>>>>>> cfec2f53d22bc11cfcb99a5d1b3c8546c7e0c62a

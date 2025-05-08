@@ -14,19 +14,13 @@ class InformationBox extends Component {
         marginBottom: "1em",
         fontSize: "1.2em",
         fontFamily: "'Fraunces', serif",
-<<<<<<< HEAD
         textAlign: "center",
-=======
->>>>>>> cfec2f53d22bc11cfcb99a5d1b3c8546c7e0c62a
       },
       listUnstyled: {
         listStyle: "none", 
         padding: "0",
-<<<<<<< HEAD
         textAlign: "center",
 
-=======
->>>>>>> cfec2f53d22bc11cfcb99a5d1b3c8546c7e0c62a
       },
     };
 
@@ -51,8 +45,4 @@ class InformationBox extends Component {
   }
 }
 
-<<<<<<< HEAD
 export default InformationBox;
-=======
-export default InformationBox;
->>>>>>> cfec2f53d22bc11cfcb99a5d1b3c8546c7e0c62a
