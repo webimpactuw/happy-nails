@@ -31,8 +31,13 @@ const SectionDivider = ({ children, align = 'left' }) => {
     <div style={containerStyle}>
       {(align === 'right') && <div style={lineStyle}></div>}
 
-      <span style={textStyle}>
-        {children}
+      <span style={{
+        fontFamily: "'Fraunces', serif",
+        fontSize: '1.5rem',
+        color: '#7d1260',
+        fontStyle: 'italic'
+      }}>
+        {title}
       </span>
 
       {(align === 'center' || align === 'left') && <div style={lineStyle}></div>}
