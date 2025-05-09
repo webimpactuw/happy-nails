@@ -1,4 +1,6 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+import HeroBanner from '../components/HeroBanner';
+import Foot from '../components/Foot';
 
 function HomePage() {
 
@@ -10,13 +12,11 @@ function HomePage() {
 */
 
   return (
-    <div style={{ padding: '2rem', textAlign: 'center' }}>
-      <h1>Counter App</h1>
-      <p>Count: {count}</p>
-      <button onClick={() => setCount(count + 1)}>
-        Increment
-      </button>
-    </div>
+    <>
+    <HeroBanner></HeroBanner>
+    <Foot></Foot> 
+    </>
+
   );
 }
 
