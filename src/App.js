@@ -6,6 +6,7 @@ import TestPage from './pages/TestPage';
 import ClickPage from './pages/ClickPage';
 import ServicePage from './pages/ServicePage';
 import NavBar from './components/NavBar';
+import FormPage from './pages/FormPage';
 
 /*
  TODO:  
@@ -24,6 +25,7 @@ function App() {
           <Route path="/services" element={<ServicePage />}/>
           <Route path="/test" element={<TestPage />}/>
           <Route path="/test/click" element={<ClickPage />}/>
+          <Route path="/pages" element={<FormPage />} />
 
         </Routes>
     </BrowserRouter>
