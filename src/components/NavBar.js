@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import HoverButton from '../components/HoverButton'
 import { motion } from "motion/react"
+import NavButton from './NavButton';
 
 
 
@@ -64,12 +65,14 @@ function NavBar() {
   <div>
   <nav>
     <div style={navBarStyle}>
-            <h1  style ={logoStyle}>Happy Nails</h1>
+        <h1 style ={logoStyle}>Happy Nails</h1>
         <div style={navigationStyle}>
-                <a style={navStyle} href='/'>Home</a>
-                <a style={navStyle} href='/about'>About</a>
-                <HoverButton buttonStyle={navStyle}></HoverButton>
-                <a style={navStyle} href='/contacts'>Contact</a>
+
+          <NavButton text={'Home'} link={'/'} defaultStyle={navStyle}></NavButton>
+          <NavButton text={'About'} link={'/about'} defaultStyle={navStyle}></NavButton>
+          <HoverButton buttonStyle={navStyle}></HoverButton>
+          <NavButton text={'Contact'} link={'/contacts'} defaultStyle={navStyle}></NavButton>
+
             <motion.button
               style={buttonStyle}
               whileHover={{
