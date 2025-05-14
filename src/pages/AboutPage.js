@@ -5,7 +5,7 @@ function AboutPage() {
   return (
     <>
     {/* TODO: add about page */}
-    <SectionDivider></SectionDivider>
+    <SectionDivider title="About"></SectionDivider>
     </>
 
   );

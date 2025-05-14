@@ -50,12 +50,11 @@ function NavBar() {
         backgroundColor: isHovered ? 'rgb(243, 243, 243)' : 'white',
         color: 'rgb(125, 18, 96)',
         fontFamily: 'Arial, sans-serif',
-        // borderRadius: '5px',
+        borderRadius: '5px',
         borderColor: 'white',
         padding: '1em 1.5em ',
         boxShadow: 'black',
         fontWeight: 'bold',
-
     }
 
   return (
@@ -66,6 +65,7 @@ function NavBar() {
             <h1  style ={logoStyle}>Happy Nails</h1>
         <div style={navigationStyle}>
                 <a style={navStyle} href='/'>Home</a>
+                <a style={navStyle} href='/about'>About</a>
                 <HoverButton buttonStyle={navStyle}></HoverButton>
                 <a style={navStyle} href='/contacts'>Contact</a>
             <motion.button

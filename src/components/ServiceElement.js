@@ -46,7 +46,7 @@ function ServiceElement(props){
         color: '#7d1260',
         fontFamily: 'DM Sans',
         marginBottom: '30px',
-        padding: '40px 0 0 40px',
+        padding: '0px 0 0 40px',
         fontSize: ''
     }
     const label = {
@@ -88,6 +88,16 @@ function ServiceElement(props){
                 <span style={label}>{props.label2} </span>
                 <span style={dots}></span>
                 <span style={price}>{props.price2}</span>
+            </div>
+            <div style={lineItem}> 
+                <span style={label}>{props.label3} </span>
+                <span style={dots}></span>
+                <span style={price}>{props.price3}</span>
+            </div>
+            <div style={lineItem}> 
+                <span style={label}>{props.label4} </span>
+                <span style={dots}></span>
+                <span style={price}>{props.price4}</span>
             </div>
         </div>
     </div>
