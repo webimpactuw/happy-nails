@@ -29,12 +29,12 @@ const SectionDivider = ({ children, align = 'left' }) => {
 
   return (
     <div style={containerStyle}>
-      {(align === 'right') && <div style={lineStyle}></div>}
-
+      {(align === 'center' || align === 'right') && <div style={lineStyle}></div>}
+  
       <span style={textStyle}>
         {children}
       </span>
-
+  
       {(align === 'center' || align === 'left') && <div style={lineStyle}></div>}
     </div>
   );

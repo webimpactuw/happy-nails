@@ -13,7 +13,7 @@ function ContactPage() {
     const halfStyle = {
         width: '50%', 
         height: '100vh', 
-        padding: '1em', 
+        padding: '4em 5em 2em 5em', 
         boxSizing: 'border-box'
     };
 
@@ -87,6 +87,32 @@ function ContactPage() {
             </div>
             
             <div style={halfStyle}>
+            <form style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+    <div>
+      <label style={labelStyle}>Name</label>
+      <div style={{ display: 'flex', gap: '0.5rem' }}>
+        <input type="text" placeholder="First" style={{ ...inputStyle, flex: 1 }} />
+        <input type="text" placeholder="Last" style={{ ...inputStyle, flex: 1 }} />
+      </div>
+    </div>
+
+    <div>
+      <label style={labelStyle}>Email</label>
+      <input type="email" placeholder="example@email.com" style={inputStyle} />
+    </div>
+
+    <div>
+      <label style={labelStyle}>Phone (optional)</label>
+      <input type="tel" placeholder="xxx-xxx-xxxx" style={inputStyle} />
+    </div>
+
+    <div>
+      <label style={labelStyle}>Message</label>
+      <textarea placeholder="Type your message ..." style={{ ...inputStyle, height: '100px', resize: 'vertical' }} />
+    </div>
+
+    <button type="submit" style={buttonStyle}>Submit</button>
+  </form>
             </div>
             
         </div>
