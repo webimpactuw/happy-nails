@@ -22,7 +22,7 @@ const SectionDivider = ({ children, align = 'left' }) => {
 
   const textStyle = {
     fontFamily: "'Fraunces', serif",
-    fontSize: '1.5rem',
+    fontSize: '1.75rem',
     color: '#7d1260',
     fontWeight: 'normal',
   };
