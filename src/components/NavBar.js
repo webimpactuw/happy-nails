@@ -55,7 +55,6 @@ function NavBar() {
         padding: '1em 1.5em ',
         boxShadow: 'black',
         fontWeight: 'bold',
-
     }
 
   return (
@@ -66,6 +65,7 @@ function NavBar() {
             <h1  style ={logoStyle}>Happy Nails</h1>
         <div style={navigationStyle}>
                 <a style={navStyle} href='/'>Home</a>
+                <a style={navStyle} href='/about'>About</a>
                 <HoverButton buttonStyle={navStyle}></HoverButton>
                 <a style={navStyle} href='/contacts'>Contact</a>
             <motion.button
