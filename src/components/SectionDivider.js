@@ -22,19 +22,19 @@ const SectionDivider = ({ children, align = 'left' }) => {
 
   const textStyle = {
     fontFamily: "'Fraunces', serif",
-    fontSize: '1.5rem',
+    fontSize: '1.75rem',
     color: '#7d1260',
     fontWeight: 'normal',
   };
 
   return (
     <div style={containerStyle}>
-      {(align === 'right') && <div style={lineStyle}></div>}
-
+      {(align === 'center' || align === 'right') && <div style={lineStyle}></div>}
+  
       <span style={textStyle}>
         {children}
       </span>
-
+  
       {(align === 'center' || align === 'left') && <div style={lineStyle}></div>}
     </div>
   );

@@ -28,7 +28,7 @@ function App() {
           <Route path="/contacts" element={<ContactPage />}/>
           <Route path="/test" element={<TestPage />}/>
           <Route path="/test/click" element={<ClickPage />}/>
-
+          <Route path="/contact" element={<ContactPage />}/>
         </Routes>
     </BrowserRouter>
   );
