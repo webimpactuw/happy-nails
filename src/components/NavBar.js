@@ -50,7 +50,7 @@ function NavBar() {
         backgroundColor: isHovered ? 'rgb(243, 243, 243)' : 'white',
         color: 'rgb(125, 18, 96)',
         fontFamily: 'Arial, sans-serif',
-        // borderRadius: '5px',
+        borderRadius: '5px',
         borderColor: 'white',
         padding: '1em 1.5em ',
         boxShadow: 'black',
