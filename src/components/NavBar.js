@@ -40,22 +40,24 @@ function NavBar() {
         alignItems: 'center',
         color: 'white',
         padding: '1em',
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: 'DM Sans',
         fontSize: '100%',
         fontWeight: 'bold',
         textDecoration: 'none',
+        fontWeight: '100',
 
     }
 
     const buttonStyle = {
         backgroundColor: isHovered ? 'rgb(243, 243, 243)' : 'white',
         color: 'rgb(125, 18, 96)',
-        fontFamily: 'Arial, sans-serif',
+        fontFamily: 'DM Sans',
         borderRadius: '5px',
         borderColor: 'white',
-        padding: '1em 1.5em ',
+        padding: '0.75em 1.5em ',
         boxShadow: 'black',
-        fontWeight: 'bold',
+        fontWeight: '600',
+        fontSize: '15px'
     }
 
   return (

@@ -7,6 +7,7 @@ import ClickPage from './pages/ClickPage';
 import ServicePage from './pages/ServicePage';
 import ContactPage from './pages/ContactPage';
 import NavBar from './components/NavBar';
+import AboutPage from './pages/AboutPage';
 import FormPage from './pages/FormPage';
 
 /*
@@ -23,6 +24,7 @@ function App() {
       <NavBar/>
         <Routes>
           <Route path="/" element={<HomePage />}/>
+          <Route path="/about" element={<AboutPage/>}/>
           <Route path="/services" element={<ServicePage />}/>
           <Route path="/booking" element={<FormPage />}/>
           <Route path="/contacts" element={<ContactPage />}/>
