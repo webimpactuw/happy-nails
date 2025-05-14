@@ -5,7 +5,6 @@ import ServiceElement from '../components/ServiceElement';
 function ServicePage() {
     const body = {
         backgroundColor: '#FEE8ED',
-        // height: '100vh',
         padding: '2em'
     }
 
