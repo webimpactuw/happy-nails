@@ -69,7 +69,7 @@ function ServiceElement(props){
 
 
     return (    
-    <div style={serviceContainer}>
+    <div style={serviceContainer} id={props.id}>
         <div style={photoContainer}>
         </div>
         <div style={descriptionContainer}>
