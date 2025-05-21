@@ -60,7 +60,7 @@ function AboutPage() {
       </div>
       <div style={aboutContainer}>
         <div style={about}>
-          <h1 style={{fontWeight:'300', fontFamily: "'Fraunces', serif"}}>Who are we?</h1>
+          <SectionDivider align="left">About Us</SectionDivider>
           <h3 style={{fontWeight:'100', fontFamily: "DM Sans"}}>Founded in 2006 by owner Nhung Nguyen, <b>Happy Nails Salon </b>in Post Falls, 
             Idaho, offers professional nail care services in a clean, relaxing environment. From manicures and pedicures to custom nail art, our friendly staff 
             ensures every client receives the highest quality service and care. Visit us for a pampering experience you won’t forget!</h3>

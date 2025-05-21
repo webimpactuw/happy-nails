@@ -49,9 +49,9 @@ function HoverButton(props){
         onMouseLeave={() => setIsHovered(false)}>
             <a onClick={() => navigate('/services')} style={props.buttonStyle}>Services</a>
             <div style={isHovered ? dropdownContentHover : {display: 'none'}}>
+                <a href="#" style={dropDownElement}>Manicure</a>
+                <a href="#" style={dropDownElement}>Pedicure</a>
                 <a href="#" style={dropDownElement}>Nails</a>
-                <a href="#" style={dropDownElement}>Waxing</a>
-                <a href="#" style={dropDownElement}>Foot Massage</a>
             </div>
         </div>
 

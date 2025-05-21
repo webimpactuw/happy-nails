@@ -8,18 +8,10 @@ function ServicePage() {
         padding: '2em'
     }
 
-
-/*
- TODO:  
-    - put heroBanner directly into HomePage
-    - moving gallery
-    - reviews
-*/
-
   return (
     <>
     <div style={body}>
-        <SectionDivider title="Services"></SectionDivider>
+        <SectionDivider align="left">Services</SectionDivider>
         <ServiceElement name="Manicure" description="A luxurious hand treatment that includes nail shaping, cuticle care, skin softening, and a flawless polish finish—designed to leave your hands feeling smooth, elegant, and refreshed." 
         label1="Classic Manicure" price1="20$" label2="Gel Manicure" price2="35$" label3="Get Polish Charge H/F" price3="25$/30$"
         label4="Nail Repairs" price4="$5 & up"
