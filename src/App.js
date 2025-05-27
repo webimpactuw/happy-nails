@@ -10,7 +10,7 @@ import Foot from './components/Foot';
 
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/happy-nails">
       <NavBar/>
       <div style={{ marginTop: '4em' }}>
           <Routes>
