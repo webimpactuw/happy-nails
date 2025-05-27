@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import HoverButton from '../components/HoverButton';
 import { motion } from 'framer-motion';
 import NavButton from './NavButton';
+import { useNavigate } from 'react-router-dom';
 
 function NavBar() {
-  const [isHovered, setIsHovered] = useState(false);
+
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
@@ -36,12 +38,12 @@ function NavBar() {
     justifyContent: 'space-between',
     flexDirection: 'row',
     padding: isMobile ? '0.5em' : '0 1em',
-    flexWrap: isMobile ? 'wrap' : 'nowrap',
+    flexWrap: 'nowrap',
   };
 
   const navigationStyle = {
     display: 'flex',
-    flexDirection: isMobile ? 'column' : 'row',
+    flexDirection: isMobile ? 'row' : 'row',
     justifyContent: isMobile ? 'center' : 'flex-end',
     alignItems: 'center',
     width: isMobile ? '100%' : 'auto',
@@ -61,7 +63,7 @@ function NavBar() {
   };
 
   const buttonStyle = {
-    backgroundColor: isHovered ? 'rgb(243, 243, 243)' : 'white',
+    backgroundColor: 'rgb(243, 243, 243)',
     color: 'rgb(125, 18, 96)',
     fontFamily: 'DM Sans',
     borderRadius: '5px',
@@ -76,7 +78,8 @@ function NavBar() {
       <div style={navBarStyle}>
         <h1 style={logoStyle}>Happy Nails</h1>
         <div style={navigationStyle}>
-          <NavButton text="Home" link="/" defaultStyle={navStyle} />
+        {!isMobile && (
+          <NavButton text="Home" link="/" defaultStyle={navStyle} />)}
           <NavButton text="About" link="/about" defaultStyle={navStyle} />
           <HoverButton buttonStyle={navStyle} />
           <NavButton text="Contact" link="/contacts" defaultStyle={navStyle} />
@@ -85,8 +88,8 @@ function NavBar() {
             whileHover={{ scale: 1.05, backgroundColor: 'rgb(243, 243, 243)' }}
             whileTap={{ scale: 0.95 }}
             transition={{ type: 'spring', stiffness: 300 }}
-            onClick={() => (window.location.href = '/booking')}
-          >
+            onClick={() => navigate('/booking')}
+            >
             Book Now
           </motion.button>
         </div>

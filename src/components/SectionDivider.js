@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const SectionDivider = ({ children, align = 'left' }) => {
   const containerStyle = {
@@ -11,7 +11,7 @@ const SectionDivider = ({ children, align = 'left' }) => {
         : align === 'right'
         ? 'flex-end'
         : 'flex-start',
-    margin: '1rem 0'
+    margin: '1rem 0',
   };
 
   const lineStyle = {
@@ -30,14 +30,17 @@ const SectionDivider = ({ children, align = 'left' }) => {
   return (
     <div style={containerStyle}>
       {(align === 'center' || align === 'right') && <div style={lineStyle}></div>}
-  
-      <span style={textStyle}>
-        {children}
-      </span>
-  
+
+      <span style={textStyle}>{children}</span>
+
       {(align === 'center' || align === 'left') && <div style={lineStyle}></div>}
     </div>
   );
+};
+
+SectionDivider.propTypes = {
+  children: PropTypes.node.isRequired,
+  align: PropTypes.oneOf(['left', 'center', 'right']),
 };
 
 export default SectionDivider;

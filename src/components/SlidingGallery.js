@@ -24,11 +24,10 @@ function CustomNavigationOverlay() {
           background: 'rgba(0,0,0,0.4)',
           color: '#fff',
           border: 'none',
-          padding: '0.5rem 1rem',
+          padding: '2em',
           cursor: 'pointer',
         }}
       >
-        ←
       </button>
       <button
         onClick={() => swiper.slideNext()}
@@ -41,11 +40,10 @@ function CustomNavigationOverlay() {
           background: 'rgba(0,0,0,0.4)',
           color: '#fff',
           border: 'none',
-          padding: '0.5rem 1rem',
+          padding: '2em',
           cursor: 'pointer',
         }}
       >
-        →
       </button>
     </>
   );
@@ -58,7 +56,8 @@ function SlidingGallery() {
         position: 'relative',
         width: '100%',
         overflow: 'hidden',
-        paddingBottom: '0px', // eliminate extra padding
+        paddingBottom: '0px',
+        backgroundColor: '#f9c4d2'
       }}
     >
       <Swiper
@@ -69,14 +68,21 @@ function SlidingGallery() {
       >
         {images.map((img, index) => (
           <SwiperSlide key={index}>
+          <div
+            style={{
+              width: '100%',
+              aspectRatio: '4 / 3',
+              padding: '1em',
+              boxSizing: 'border-box',
+            }}
+          >
             <div
               style={{
                 width: '100%',
-                aspectRatio: '4 / 3',
+                height: '100%',
+                borderRadius: '12px',
                 overflow: 'hidden',
-                background: '#eee',
-                margin: 0,
-                padding: 0,
+                boxSizing: 'border-box',
               }}
             >
               <img
@@ -87,10 +93,13 @@ function SlidingGallery() {
                   height: '100%',
                   objectFit: 'cover',
                   display: 'block',
+                  borderRadius: '8px',
                 }}
               />
             </div>
-          </SwiperSlide>
+          </div>
+        </SwiperSlide>
+        
         ))}
         <CustomNavigationOverlay />
       </Swiper>

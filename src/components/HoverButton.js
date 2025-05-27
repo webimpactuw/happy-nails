@@ -1,61 +1,56 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-function HoverButton(props){
-    const[isHovered, setIsHovered] = useState(false);
-    const navigate = useNavigate();
+/* eslint-disable react/prop-types */
 
-    console.log(props.buttonStyle)
+function HoverButton(props) {
+  const [isHovered, setIsHovered] = useState(false);
+  const navigate = useNavigate();
 
-    /* The container <div> needed to position the dropdown content */
-    const dropdown = {
-        position: 'relative',
-        display: 'inline-block'
-    }
+  const dropdown = {
+    position: 'relative',
+    display: 'inline-block',
+  };
 
-    /* Dropdown button */
-    const dropbtn = {
-        backgroundColor: 'rgb(125, 18, 96)',
-        fontFamily: 'Arial, sans-serif',
-        color: 'white',
-        // padding: '16px',
-        // height: '100px',
+  const dropdownContentHover = {
+    display: 'block',
+    position: 'absolute',
+    backgroundColor: 'white',
+    width: '100%',
+    boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
+    zIndex: '1',
+  };
 
-        border: 'none',
-        fontWeight: 'bold',
-        fontSize: '100%'
-    }
+  const dropDownElement = {
+    color: 'rgb(125, 18, 96)',
+    padding: '12px 16px',
+    textDecoration: 'none',
+    display: 'block',
+    justifyContent: 'center',
+    cursor: 'pointer',
+  };
 
-    /* Dropdown content when hovered */ 
-    const dropdownContentHover = {
-        display: 'block',
-        position: 'absolute',
-        backgroundColor: 'white',
-        width: '100%',
-        boxShadow: '0px 8px 16px 0px rgba(0,0,0,0.2)',
-        zIndex: '1'
-    }
-
-    /* Links inside the dropdown */
-    const dropDownElement = {
-        color:'rgb(125, 18, 96)',
-        padding: '12px 16px',
-        textDecoration: 'none',
-        display: 'block',
-        justifyContent: 'center'
-    }
-    return (
-        <div style={dropdown}
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}>
-            <a onClick={() => navigate('/services')} style={props.buttonStyle}>Services</a>
-            <div style={isHovered ? dropdownContentHover : { display: 'none' }}>
-                <a onClick={() => navigate('/services#manicure')} style={dropDownElement}>Manicure</a>
-                <a onClick={() => navigate('/services#pedicure')} style={dropDownElement}>Pedicure</a>
-                <a onClick={() => navigate('/services#acrylic')} style={dropDownElement}>Acrylic Nails</a>
-            </div>
-        </div>
-
-    );
+  return (
+    <div
+      style={dropdown}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <span onClick={() => navigate('/services')} style={{ ...props.buttonStyle, cursor: 'pointer' }}>
+        Services
+      </span>
+      <div style={isHovered ? dropdownContentHover : { display: 'none' }}>
+        <span onClick={() => navigate('/services#manicure')} style={dropDownElement}>
+          Manicure
+        </span>
+        <span onClick={() => navigate('/services#pedicure')} style={dropDownElement}>
+          Pedicure
+        </span>
+        <span onClick={() => navigate('/services#acrylic')} style={dropDownElement}>
+          Acrylic Nails
+        </span>
+      </div>
+    </div>
+  );
 }
 
 export default HoverButton;

@@ -23,6 +23,7 @@ function ContactPage() {
     minHeight: '100vh',
     display: 'flex',
     flexDirection: isSmallScreen ? 'column' : 'row',
+    marginTop:  '3em'
   };
 
   const leftHalfStyle = {
@@ -30,6 +31,7 @@ function ContactPage() {
     height: isSmallScreen ? 'auto' : '100vh',
     padding: isSmallScreen ? '2em' : '4em 2em 2em 5em',
     boxSizing: 'border-box',
+
   };
 
   const rightHalfStyle = {
@@ -37,6 +39,8 @@ function ContactPage() {
     height: isSmallScreen ? 'auto' : '100vh',
     padding: isSmallScreen ? '2em' : '4em 5em 2em 2em',
     boxSizing: 'border-box',
+    marginTop: '2em'
+
   };
 
   const contactRow = {
