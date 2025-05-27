@@ -1,8 +1,6 @@
-import React from "react";
 import InformationBox from "./InformationBox";
 
 function Foot() {
-  // Data for the footer
   const footerData = {
     hours: [
       { date: "Mon - Fri", time: "10 AM - 7 PM" },
@@ -20,7 +18,6 @@ function Foot() {
     mainFooter: {
       color: "white",
       backgroundColor: "#7D1260",
-      paddingTop: "3em",
       position: "relative",
       bottom: "0",
       width: "100%",
@@ -40,7 +37,6 @@ function Foot() {
       textAlign: "center", 
       fontSize: "0.9em",
       color: "white",
-      marginTop: "2em",
     }
   };
 

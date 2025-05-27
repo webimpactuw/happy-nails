@@ -1,7 +1,20 @@
-import React from 'react';
 import bannerImage from '../assets/HeroBanner.png';
+import { useNavigate } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 function HeroBanner() {
+  const navigate = useNavigate(); 
+  const buttonStyle = {
+    color: 'rgb(243, 243, 243)',
+    backgroundColor: 'rgb(125, 18, 96)',
+    fontFamily: 'DM Sans',
+    borderRadius: '5px',
+    border: 'none',
+    padding: '0.75em 1.5em',
+    fontWeight: '600',
+    fontSize: '15px',
+  };
+
   return (
     <div
       style={{
@@ -24,21 +37,15 @@ function HeroBanner() {
       }}>
         Happy Nails
       </h1>
-      <button
-        style={{
-          padding: '0.75rem 1.5rem',
-          fontSize: '1.2rem',
-          backgroundColor: '#8227B5',
-          color: 'white',
-          border: 'none',
-          borderRadius: '8px',
-          cursor: 'pointer',
-          fontFamily: "'DM Sans', sans-serif",
-          marginTop: '0.75em'
-        }}
-      >
-        Book Now
-      </button>    
+        <motion.button
+            style={buttonStyle}
+            whileHover={{ scale: 1.05}}
+            whileTap={{ scale: 0.95 }}
+            transition={{ type: 'spring', stiffness: 300 }}
+            onClick={() => navigate('/booking')}
+            >
+            Book Now
+          </motion.button>   
     </div>
   );
 }

@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import { Component } from "react";
+import PropTypes from "prop-types";
 
 class InformationBox extends Component {
   render() {
-    const { title, items } = this.props; 
+    const { title, items } = this.props;
 
     const styles = {
       col: {
@@ -17,10 +18,9 @@ class InformationBox extends Component {
         textAlign: "center",
       },
       listUnstyled: {
-        listStyle: "none", 
+        listStyle: "none",
         padding: "0",
         textAlign: "center",
-
       },
     };
 
@@ -44,5 +44,19 @@ class InformationBox extends Component {
     );
   }
 }
+
+// ✅ PropTypes validation
+InformationBox.propTypes = {
+  title: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(
+    PropTypes.oneOfType([
+      PropTypes.string,
+      PropTypes.shape({
+        date: PropTypes.string,
+        time: PropTypes.string,
+      }),
+    ])
+  ).isRequired,
+};
 
 export default InformationBox;
