@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/happy-nails/static/css/main.6e2c8d24.css",
-    "main.js": "/happy-nails/static/js/main.8b277ef5.js",
+    "main.js": "/happy-nails/static/js/main.0fe04f0d.js",
     "static/js/453.39333387.chunk.js": "/happy-nails/static/js/453.39333387.chunk.js",
     "static/media/greenpinknails.png": "/happy-nails/static/media/greenpinknails.02fc13ef4083d7298e3d.png",
     "static/media/pinkheartnail.png": "/happy-nails/static/media/pinkheartnail.d61c1389dc346ae8c0e6.png",
@@ -11,11 +11,11 @@
     "static/media/arrowdown.svg": "/happy-nails/static/media/arrowdown.64b5db1c8988eb8c78900fb6fed82bf2.svg",
     "index.html": "/happy-nails/index.html",
     "main.6e2c8d24.css.map": "/happy-nails/static/css/main.6e2c8d24.css.map",
-    "main.8b277ef5.js.map": "/happy-nails/static/js/main.8b277ef5.js.map",
+    "main.0fe04f0d.js.map": "/happy-nails/static/js/main.0fe04f0d.js.map",
     "453.39333387.chunk.js.map": "/happy-nails/static/js/453.39333387.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e2c8d24.css",
-    "static/js/main.8b277ef5.js"
+    "static/js/main.0fe04f0d.js"
   ]
 }
