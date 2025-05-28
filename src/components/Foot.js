@@ -7,10 +7,10 @@ function Foot() {
       { date: "Sat", time: "10 AM - 6 PM" },
       { date: "Sun", time: "10 AM - 4 PM" },
     ],
-    location: "3904 E Mullan Ave #F, Post Falls, ID 83854", 
+    location: "3904 E Mullan Ave #F, Post Falls, ID 83854",
     contact: {
-      phone: "208 773 4627", 
-      email: "happy@nails.com", 
+      phone: "208 773 4627",
+      email: "happy@nails.com",
     },
   };
 
@@ -27,28 +27,41 @@ function Foot() {
     row: {
       display: "flex",
       justifyContent: "space-between",
-      flexWrap: "wrap",
+      flexWrap: "nowrap", 
     },
     footerTextContainer: {
-      display: "flex",         // Use flexbox for centering
-      justifyContent: "center", // Center the content horizontally
-      alignItems: "center",     // Center vertically (if needed)
-      width: "100%",            // Make sure it takes full width
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "100%",
+      paddingTop: "1rem"
     },
     footerText: {
-      textAlign: "center", 
+      textAlign: "center",
       fontSize: "0.9em",
       color: "white",
-    }
+    },
   };
 
   return (
     <div style={styles.mainFooter}>
       <div className="container">
         <div style={styles.row}>
-          <InformationBox title="Hours" items={footerData.hours} />
-          <InformationBox title="Location" items={[footerData.location]} /> 
-          <InformationBox title="Contact" items={[footerData.contact.phone, footerData.contact.email]} /> 
+          <InformationBox
+            title="Hours"
+            items={footerData.hours}
+            align="left"
+          />
+          <InformationBox
+            title="Location"
+            items={[footerData.location]}
+            align="center"
+          />
+          <InformationBox
+            title="Contact"
+            items={[footerData.contact.phone, footerData.contact.email]}
+            align="right"
+          />
         </div>
         <hr />
         <div style={styles.footerTextContainer}>

@@ -6,7 +6,8 @@ import ContactPage from './pages/ContactPage';
 import NavBar from './components/NavBar';
 import AboutPage from './pages/AboutPage';
 import FormPage from './pages/FormPage';
-import Foot from './components/Foot';
+// import Foot from './components/Foot';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -22,7 +23,8 @@ function App() {
             <Route path="/contact" element={<ContactPage />}/>
           </Routes>
         </div>
-        <Foot></Foot>
+        {/* <Foot></Foot> */}
+        <Footer></Footer>
     </BrowserRouter>
   );
 }

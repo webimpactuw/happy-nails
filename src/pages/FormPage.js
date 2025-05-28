@@ -19,10 +19,11 @@ function FormPage() {
 
   const iframeStyle = {
     width: '100%',
-    minHeight: '1000px',
+    height: '140em',
     border: 'none',
+    overflow: 'auto',
   };
-
+  
   return (
     <div style={containerStyle}>
       <div style={cardStyle}>
