@@ -57,7 +57,7 @@ function SlidingGallery() {
         width: '100%',
         overflow: 'hidden',
         paddingBottom: '0px',
-        backgroundColor: '#f9c4d2'
+        backgroundColor: '#FEE8ED'
       }}
     >
       <Swiper
