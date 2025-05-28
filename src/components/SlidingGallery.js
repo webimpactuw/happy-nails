@@ -76,8 +76,8 @@ function SlidingGallery() {
         position: 'relative',
         width: '100%',
         overflow: 'hidden',
-        backgroundColor: '#f9c4d2',
-        padding: '0 5vw',
+        backgroundColor: "#FEE8ED",
+        padding: '0 0',
         boxSizing: 'border-box',
       }}
     >
