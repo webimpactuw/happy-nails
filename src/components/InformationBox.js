@@ -45,7 +45,6 @@ class InformationBox extends Component {
   }
 }
 
-// ✅ PropTypes validation
 InformationBox.propTypes = {
   title: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(
