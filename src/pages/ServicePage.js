@@ -23,7 +23,7 @@ function ServicePage() {
   return (
     <>
       <div style={body}>
-        <SectionDivider title="Services" />
+        <SectionDivider>Services</SectionDivider>
 
         <ServiceElement
           id="manicure"

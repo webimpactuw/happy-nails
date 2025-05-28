@@ -12,7 +12,10 @@ function HeroBanner() {
     border: 'none',
     padding: '0.75em 1.5em',
     fontWeight: '600',
-    fontSize: '15px',
+    fontSize: '17px',
+    width: '150px',
+    height: '50px',
+    boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.2), -2px -2px 5px rgba(255, 255, 255, 0.3)'
   };
 
   return (
@@ -21,7 +24,7 @@ function HeroBanner() {
         backgroundImage: `url(${bannerImage})`, 
         backgroundSize: 'cover',
         backgroundPosition: 'center',
-        height: '100vh',
+        height: '70vh',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -31,9 +34,15 @@ function HeroBanner() {
       }}
     >
       <h1 style={{ 
-        fontSize: '4rem', 
+        fontSize: '6rem', 
         marginBottom: '1rem', 
-        fontFamily: "'Fraunces', serif" 
+        fontFamily: "'Fraunces', serif",
+        padding: '1rem',
+        margin: '0',
+        fontStyle: 'italic',
+        fontWeight: '400',
+        width: '700px',
+        textAlign: 'center',
       }}>
         Happy Nails
       </h1>

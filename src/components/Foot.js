@@ -21,6 +21,8 @@ function Foot() {
       position: "relative",
       bottom: "0",
       width: "100%",
+      fontStyle: "italic",
+      fontWeight: '300',
     },
     row: {
       display: "flex",

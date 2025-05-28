@@ -7,7 +7,7 @@ function AboutPage() {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    padding: '5vw 5vw 3vw',
+    padding: '5vw 5vw 5vw',
   };
 
   const missionStatement = {
@@ -53,7 +53,7 @@ function AboutPage() {
       <div style={body}>
         <div style={missionSection}>
           <div style={missionStatement}>
-            <h1 style={{ fontWeight: '300', fontFamily: "'Fraunces', serif" }}>
+            <h1 style={{ fontWeight: 'bold', fontFamily: "'Fraunces', serif" }}>
               OUR MISSION IS TO SATISFY
             </h1>
             <h3
@@ -83,7 +83,7 @@ function AboutPage() {
 
         <div style={aboutContainer}>
           <div style={about}>
-            <h1 style={{ fontWeight: '300', fontFamily: "'Fraunces', serif" }}>
+            <h1 style={{ fontWeight: 'bold', fontFamily: "'Fraunces', serif" }}>
               Who are we?
             </h1>
             <h3 style={{ fontWeight: '100', fontFamily: 'DM Sans' }}>
