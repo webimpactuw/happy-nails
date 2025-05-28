@@ -76,7 +76,7 @@ function NavBar() {
   return (
     <nav>
       <div style={navBarStyle}>
-        <h1 style={logoStyle}>Happy Nails</h1>
+        <h1 style={logoStyle} onClick={() => navigate('/')}>Happy Nails</h1>
         <div style={navigationStyle}>
         {!isMobile && (
           <NavButton text="Home" link="/" defaultStyle={navStyle} />)}
