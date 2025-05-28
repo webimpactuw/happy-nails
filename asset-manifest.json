@@ -1,18 +1,21 @@
 {
   "files": {
     "main.css": "/happy-nails/static/css/main.6e2c8d24.css",
-    "main.js": "/happy-nails/static/js/main.0d8ffb32.js",
+    "main.js": "/happy-nails/static/js/main.8b277ef5.js",
     "static/js/453.39333387.chunk.js": "/happy-nails/static/js/453.39333387.chunk.js",
+    "static/media/greenpinknails.png": "/happy-nails/static/media/greenpinknails.02fc13ef4083d7298e3d.png",
+    "static/media/pinkheartnail.png": "/happy-nails/static/media/pinkheartnail.d61c1389dc346ae8c0e6.png",
     "static/media/HeroBanner.png": "/happy-nails/static/media/HeroBanner.4c02273207ff45ffb021.png",
     "static/media/purplesharpnail.jpg": "/happy-nails/static/media/purplesharpnail.4c0b1974e868d7f628d0.jpg",
     "static/media/pinklilynail.jpg": "/happy-nails/static/media/pinklilynail.479edf5faa98d7eb84a6.jpg",
+    "static/media/arrowdown.svg": "/happy-nails/static/media/arrowdown.64b5db1c8988eb8c78900fb6fed82bf2.svg",
     "index.html": "/happy-nails/index.html",
     "main.6e2c8d24.css.map": "/happy-nails/static/css/main.6e2c8d24.css.map",
-    "main.0d8ffb32.js.map": "/happy-nails/static/js/main.0d8ffb32.js.map",
+    "main.8b277ef5.js.map": "/happy-nails/static/js/main.8b277ef5.js.map",
     "453.39333387.chunk.js.map": "/happy-nails/static/js/453.39333387.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.6e2c8d24.css",
-    "static/js/main.0d8ffb32.js"
+    "static/js/main.8b277ef5.js"
   ]
 }
